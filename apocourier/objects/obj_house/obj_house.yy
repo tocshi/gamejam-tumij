@@ -1,38 +1,38 @@
 {
-    "id": "11a8cc52-00e8-44ac-a2a8-b5ae04181c75",
+    "id": "002c592e-263a-4392-a83e-743918253655",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_player",
+    "name": "obj_house",
     "eventList": [
         {
-            "id": "408d9463-8621-4ff0-a1b0-c6051c41909d",
+            "id": "c3961ec1-aabe-41b4-b247-fa68bcd23637",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "11a8cc52-00e8-44ac-a2a8-b5ae04181c75"
+            "m_owner": "002c592e-263a-4392-a83e-743918253655"
         },
         {
-            "id": "af54667c-7719-44f8-976d-f0ef4c6886df",
+            "id": "8d92fe46-ebdc-4008-b703-54d471c0df24",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "11a8cc52-00e8-44ac-a2a8-b5ae04181c75"
+            "m_owner": "002c592e-263a-4392-a83e-743918253655"
         },
         {
-            "id": "d29c11b6-5fd9-4ff8-a01e-e17e811f95bc",
+            "id": "49e851b1-96a7-4fc0-9fd3-beae6f396fdd",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 1,
-            "eventtype": 3,
-            "m_owner": "11a8cc52-00e8-44ac-a2a8-b5ae04181c75"
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "002c592e-263a-4392-a83e-743918253655"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -53,6 +53,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "0579b21e-b80f-4b94-8772-5b630154b9ce",
+    "spriteId": "2f15721c-e336-4c0b-a627-a63a68abf196",
     "visible": true
 }

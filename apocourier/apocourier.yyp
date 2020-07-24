@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "002c592e-263a-4392-a83e-743918253655",
+            "Value": {
+                "id": "a1ecec41-c2a1-4aea-9667-e36f46fcb904",
+                "resourcePath": "objects\\obj_house\\obj_house.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "053f4046-c919-4637-a085-f67cd40887d5",
             "Value": {
                 "id": "cbaaae32-3109-481a-9c38-c8af3533b7ce",
@@ -52,6 +60,14 @@
                 "id": "ef967651-18b1-4a5a-aa9f-1eb76aa0838f",
                 "resourcePath": "views\\0b58a030-525f-441a-84a7-96fdedf4f6cd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "10a4db15-db1d-4b3f-b16b-0b02ec6a4cbd",
+            "Value": {
+                "id": "fe0105b7-89ad-4f4c-bda2-c16fbd89f89f",
+                "resourcePath": "scripts\\move_out_of_wall\\move_out_of_wall.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -253,10 +269,18 @@
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
             }
+        },
+        {
+            "Key": "fb0c4dab-b037-4be8-819e-335bf9fc7ede",
+            "Value": {
+                "id": "85e74eef-83af-49b6-8683-78e83351079c",
+                "resourcePath": "fonts\\fnt_default\\fnt_default.yy",
+                "resourceType": "GMFont"
+            }
         }
     ],
     "script_order": [
-        
+        "10a4db15-db1d-4b3f-b16b-0b02ec6a4cbd"
     ],
     "tutorial": ""
 }

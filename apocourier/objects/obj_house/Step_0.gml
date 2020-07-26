@@ -2,9 +2,14 @@ if(y > room_height && !outOfBounds){
 	hspeed = 0;
 	outOfBounds = true;
 	global.house = noone;
+	
+	// check if quota met, and if not, decrement life
+	if(mailreq > 0 && global.hp > 0 && !instance_exists(obj_gameover)){
+		global.hp--;
+	}
 }
 
-if(global.house = id){
+if(global.house = id && !instance_exists(obj_gameover)){
 	// speed up downwards
 	vspeed = orig_speed + speedmod;
 	speedmod = 0;
@@ -30,4 +35,9 @@ if(global.house = id){
 		rotation=-5;
 	}
 	image_angle+=rotation;
+}
+
+// check if quota met, and speed up if it is
+if(complete){
+	orig_speed+=0.1;
 }

@@ -1,4 +1,5 @@
 
-atkTimer = 0;
+atkTimer = 10;
 speedmod = 1;
-scoremod = 1;
+valuemod = 0;
+gameover = -1;

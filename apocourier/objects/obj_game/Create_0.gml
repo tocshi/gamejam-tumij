@@ -1,8 +1,9 @@
 // reroll random seed
 randomize();
 
-// score
-mailscore = 0;
+// score & lives
+global.mailscore = 0;
+global.hp = 3;
 
 // currently controlled house
 global.house = noone;

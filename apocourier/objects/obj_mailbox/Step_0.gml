@@ -1,6 +1,6 @@
 if(instance_exists(anchor)){
-	x = anchor.x;
-	y = anchor.y;
+	hspeed = anchor.hspeed;
+	vspeed = anchor.vspeed;
 	image_angle = angle + anchor.image_angle;
 }
 

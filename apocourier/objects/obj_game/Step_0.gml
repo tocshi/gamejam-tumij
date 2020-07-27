@@ -1,23 +1,75 @@
-if(room != rm_game){exit;}
+if(room != rm_game || !ready){exit;}
 
+// ramp up difficulty
+global.difficulty +=1/1200;
+global.time++;
+
+// spawn house
 if(global.house == noone){
-	// roll a random size modifier
-	var roll = random_range(0.4,3);
-	with(instance_create_layer(irandom_range(room_width*0.2,room_width*0.8),-0.5*sprite_get_width(spr_house),"Instances",obj_house)){
-		global.house = id;
-		
-		// random size modifier
-		sizemod = roll;
-		image_xscale = sizemod;
-		image_yscale = image_xscale;
-		
-		// random speed modifier based on size
-		orig_speed = global.housespeed * (1/sizemod);
-		vspeed = orig_speed;
-		
-		mailreq = ceil(1.2 * random_range(1,global.difficulty) * random_range(0.8,1.5) * sizemod);
-		
-		// create mailbox
-		event_perform(ev_other,ev_user0);
+	event_perform(ev_other,ev_user0);
+}
+
+if(instance_exists(obj_gameover)){exit;}
+
+// spawn enemy
+if(global.time%30 == 0){
+	var roll = random_range(0,80);
+	if(roll < global.difficulty){
+		var spawn = irandom_range(0,3);
+		// buffers for spawn location
+		var x_buffer = room_width*0.2;
+		var y_buffer = room_height*0.2;
+		switch(spawn){
+			case 0:
+			case 1:
+			show_debug_message("spawned")
+			with(instance_create_layer(0,0,"Enemy",obj_alien)){
+				var xx = 0;
+				var yy = 0;
+				while(true){
+					xx = irandom_range(0-x_buffer,room_width+x_buffer);
+					yy = irandom_range(0-y_buffer,room_height+y_buffer);
+					if((xx < 0 || xx > room_width) && (yy < 0 || yy > room_height)){
+						break;
+					}
+				}
+				x = xx;
+				y = yy;
+			}
+			break;
+			
+			case 2:
+			with(instance_create_layer(0,0,"Enemy",obj_alien)){
+				sprite_index = choose(spr_alien_red,spr_alien_yellow);
+				hp = 3;
+				speed *= 0.7;
+				var xx = 0;
+				var yy = 0;
+				while(true){
+					xx = irandom_range(0-x_buffer,room_width+x_buffer);
+					yy = irandom_range(0-y_buffer,room_height+y_buffer);
+					if((xx < 0 || xx > room_width) && (yy < 0 || yy > room_height)){
+						break;
+					}
+				}
+				x = xx;
+				y = yy;
+			}
+			break;
+			
+			case 3:
+			with(instance_create_layer(0,global.player.y,"Enemy",obj_dog)){
+				var side = choose(-1,1);
+				var start = 0;
+				if(side == 1){start = room_width};
+				x = start + side*x_buffer;
+				speed = -2 * side;
+				image_xscale = side;
+			}
+			break;
+			
+			default:
+			show_error("This error literally should not happen. How did we get here...?",true);
+		}
 	}
 }

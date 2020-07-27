@@ -1,6 +1,15 @@
-if(gameover){exit;}
+if(pause){exit;}
+
+if(dying){
+	image_alpha -= 1/60;
+	image_xscale -= 1/60;
+	image_yscale += 1/10;
+	vspeed -= 1/3;
+	exit;
+}
 
 if(mouse_check_button(mb_left) && atkTimer<=0){
+	audio_play_sound(snd_throw,1,false);
 	atkTimer = 40;
 	with(instance_create_layer(x,y,"Danmaku",obj_mail)){
 		value = 1 + other.valuemod;
@@ -12,9 +21,10 @@ if(mouse_check_button(mb_left) && atkTimer<=0){
 }
 
 if(mouse_check_button(mb_right) && atkTimer<=0){
+	audio_play_sound(snd_throw,1,false);
 	atkTimer = 75;
 	with(instance_create_layer(x,y,"Danmaku",obj_mail)){
-		value = 3 * (other.valuemod+1);
+		value = (3 + other.valuemod) + max(0,(other.valuemod*2));
 		speed = 10 * other.speedmod;
 		sprite_index = spr_package;
 		direction = point_direction(x,y,mouse_x,mouse_y);

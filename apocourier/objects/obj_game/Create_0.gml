@@ -11,3 +11,10 @@ global.house = noone;
 // difficulty
 global.housespeed = 1;
 global.difficulty = 1;
+
+// time
+global.time = 0;
+ready = false;
+
+// player instance
+global.player = noone;

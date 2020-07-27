@@ -1,6 +1,6 @@
 if(sprite_index == spr_alien_red){
-	if(other.speedmod > 0.5){
-		other.speedmod-=0.5;
+	if(other.speedmod > 0.6){
+		other.speedmod-=0.2;
 		with(instance_create_depth(room_width/2,room_height/3,0,obj_narration)){
 			array = ["Mail Speed Down!"];
 		}

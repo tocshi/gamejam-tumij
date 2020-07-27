@@ -1,4 +1,4 @@
-speed = 2 + min(8,global.difficulty/4);
+speed = 2 + min(4,global.difficulty/8);
 audio_play_sound(snd_alien_spawn,1,false);
 
 // used for death

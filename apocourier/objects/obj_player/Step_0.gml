@@ -10,7 +10,7 @@ if(dying){
 
 if(mouse_check_button(mb_left) && atkTimer<=0){
 	audio_play_sound(snd_throw,1,false);
-	atkTimer = 40;
+	atkTimer = 40*(1/max(1,speedmod));
 	with(instance_create_layer(x,y,"Danmaku",obj_mail)){
 		value = 1 + other.valuemod;
 		speed = 10 * other.speedmod;
@@ -22,7 +22,7 @@ if(mouse_check_button(mb_left) && atkTimer<=0){
 
 if(mouse_check_button(mb_right) && atkTimer<=0){
 	audio_play_sound(snd_throw,1,false);
-	atkTimer = 75;
+	atkTimer = 75*(1/max(1,speedmod));
 	with(instance_create_layer(x,y,"Danmaku",obj_mail)){
 		value = (3 + other.valuemod) + max(0,(other.valuemod*2));
 		speed = 10 * other.speedmod;

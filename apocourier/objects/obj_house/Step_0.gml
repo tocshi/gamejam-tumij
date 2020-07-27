@@ -14,7 +14,7 @@ if(global.house = id && !instance_exists(obj_gameover)){
 	vspeed = orig_speed + speedmod;
 	speedmod = 0;
 	if(keyboard_check(ord("S"))){
-		speedmod = orig_speed*3;
+		speedmod = orig_speed*4;
 	}
 	
 	// horizontal movement

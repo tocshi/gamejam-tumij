@@ -13,7 +13,7 @@ if(mouse_check_button(mb_left) && atkTimer<=0){
 	atkTimer = 40*(1/max(1,speedmod));
 	with(instance_create_layer(x,y,"Danmaku",obj_mail)){
 		value = 1 + other.valuemod;
-		speed = 10 * other.speedmod;
+		speed = 8 * other.speedmod;
 		direction = point_direction(x,y,mouse_x,mouse_y);
 		if(direction>90 && direction<270){image_yscale = -1;}
 		image_angle = direction;
@@ -25,7 +25,7 @@ if(mouse_check_button(mb_right) && atkTimer<=0){
 	atkTimer = 75*(1/max(1,speedmod));
 	with(instance_create_layer(x,y,"Danmaku",obj_mail)){
 		value = (3 + other.valuemod) + max(0,(other.valuemod*2));
-		speed = 10 * other.speedmod;
+		speed = 8 * other.speedmod;
 		sprite_index = spr_package;
 		direction = point_direction(x,y,mouse_x,mouse_y);
 		if(direction>90 && direction<270){image_yscale = -1;}

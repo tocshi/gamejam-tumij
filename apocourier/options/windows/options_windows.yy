@@ -8,7 +8,7 @@
     "option_windows_company_info": "tocshi",
     "option_windows_copy_exe_to_dest": false,
     "option_windows_copyright_info": "(c) 2020 tocshi",
-    "option_windows_description_info": "Mailman, but...",
+    "option_windows_description_info": "It's just your first day being the mailman. What could possibly go wrong?",
     "option_windows_disable_sandbox": false,
     "option_windows_display_cursor": true,
     "option_windows_display_name": "Apocourier",
@@ -32,8 +32,8 @@
     "option_windows_use_splash": false,
     "option_windows_version": {
         "build": 0,
-        "major": 1,
-        "minor": 0,
+        "major": 0,
+        "minor": 3,
         "revision": 0
     },
     "option_windows_vsync": false
